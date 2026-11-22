@@ -1,0 +1,342 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f7f0;
+    color: #263b2b;
+}
+
+header {
+    background: linear-gradient(135deg, #166534, #22c55e);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.detector-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detector-box h2 {
+    color: #166534;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px dashed #86efac;
+    border-radius: 10px;
+    background: #f0fdf4;
+    margin-bottom: 20px;
+}
+
+.image-preview {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#previewImage {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 12px;
+    display: none;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#detectBtn {
+    background: #16a34a;
+    color: white;
+}
+
+#detectBtn:hover {
+    background: #15803d;
+}
+
+#clearBtn {
+    background: #e5e7eb;
+    color: #263b2b;
+}
+
+#result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f0fdf4;
+    border-radius: 10px;
+}
+
+#result h3 {
+    color: #166534;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .detector-box {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
+#cropType {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0 20px;
+    border: 2px solid #86efac;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f0fdf4;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #166534;
+}
+
+/* Soil Recommendation Section */
+
+#soil-recommendation {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: #f0f8f0;
+    border-radius: 12px;
+}
+
+#soil-recommendation h2 {
+    color: #26733b;
+    margin-bottom: 10px;
+}
+
+#soil-recommendation p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#soilCrop,
+#soilBtn {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#soilBtn {
+    background: #26733b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#soilBtn:hover {
+    background: #185529;
+}
+
+#soilResult {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Harvest Readiness Section */
+
+#harvest-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: #fff8e8;
+    border-radius: 12px;
+}
+
+#harvest-section h2 {
+    color: #946200;
+    margin-bottom: 10px;
+}
+
+#harvest-section p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#harvestCrop,
+#harvestBtn {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#harvestBtn {
+    background: #946200;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#harvestBtn:hover {
+    background: #704900;
+}
+
+#harvestResult {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+#crop-care {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: #eaf7ed;
+    border-radius: 12px;
+}
+
+#crop-care h2 {
+    color: #26733b;
+    margin-bottom: 10px;
+}
+
+#crop-care p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#careCrop,
+#careBtn {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#careBtn {
+    background: #26733b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#careBtn:hover {
+    background: #185529;
+}
+
+#careResult {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+#careResult ul {
+    display: inline-block;
+    text-align: left;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+#careResult li {
+    margin-bottom: 10px;
+}
+#weather-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: #eaf4ff;
+    border-radius: 12px;
+}
+
+#weather-section h2 {
+    color: #23649a;
+    margin-bottom: 10px;
+}
+
+#weather-section p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#cityInput,
+#weatherBtn {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#weatherBtn {
+    background: #23649a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#weatherBtn:hover {
+    background: #17466e;
+}
+
+#weatherResult {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    background: #26733b;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background: #185529;
+}
+

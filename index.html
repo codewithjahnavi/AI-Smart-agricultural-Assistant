@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop AI Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Crop AI Detector</h1>
+        <p>Detect crop diseases using AI technology</p>
+    </header>
+    <nav class="navbar">
+    <a href="#disease-detection">Disease Detection</a>
+    <a href="#soil-recommendation">Soil</a>
+    <a href="#harvest-section">Harvest</a>
+    <a href="#crop-care">Crop Care</a>
+    <a href="#weather-section">Weather</a>
+</nav>
+
+    <main>
+        <!-- Crop Disease Detector -->
+      <section class="detector-box" id="disease-detection">
+
+            <h2>Upload Crop Image</h2>
+
+            <label for="cropType">Select Crop:</label>
+
+            <select id="cropType">
+                <option value="">Choose Crop</option>
+                <option value="cotton">Cotton</option>
+                <option value="rice">Paddy / Rice</option>
+                <option value="tomato">Tomato</option>
+            </select>
+
+            <input type="file" id="imageInput" accept="image/*">
+
+            <div class="image-preview">
+                <img id="previewImage" src="" alt="Crop Preview">
+            </div>
+
+            <button id="detectBtn">Detect Disease</button>
+            <button id="clearBtn">Clear</button>
+
+            <div id="result">
+                <h3>Detection Result</h3>
+                <p id="resultText">
+                    Upload a crop image to analyze.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Soil Recommendation -->
+        <section id="soil-recommendation">
+
+            <h2>Soil Recommendation</h2>
+            <p>Select a crop to find its suitable soil type.</p>
+
+            <select id="soilCrop">
+                <option value="">Select Crop</option>
+                <option value="cotton">Cotton</option>
+                <option value="rice">Paddy</option>
+                <option value="tomato">Tomato</option>
+            </select>
+
+            <button type="button" id="soilBtn">
+                Get Soil Recommendation
+            </button>
+
+            <div id="soilResult"></div>
+
+        </section>
+
+        <!-- Harvest Readiness -->
+        <section id="harvest-section">
+
+            <h2>Harvest Readiness Guide</h2>
+            <p>Select a crop to know its harvesting time and maturity signs.</p>
+
+            <select id="harvestCrop">
+                <option value="">Select Crop</option>
+                <option value="cotton">Cotton</option>
+                <option value="rice">Paddy</option>
+                <option value="tomato">Tomato</option>
+            </select>
+
+            <button type="button" id="harvestBtn">
+                Check Harvest Guide
+            </button>
+
+            <div id="harvestResult"></div>
+
+        </section>
+<!-- Crop Care Tips -->
+<section id="crop-care">
+    <h2>Crop Care & Disease Prevention</h2>
+    <p>Select a crop to get care and prevention tips.</p>
+
+    <select id="careCrop">
+        <option value="">Select Crop</option>
+        <option value="cotton">Cotton</option>
+        <option value="rice">Paddy</option>
+        <option value="tomato">Tomato</option>
+    </select>
+
+    <button id="careBtn">Get Crop Care Tips</button>
+
+    <div id="careResult"></div>
+</section>
+<!-- Weather Information -->
+<section id="weather-section">
+    <h2>Weather Information</h2>
+    <p>Check weather conditions for farming activities.</p>
+
+    <input type="text" id="cityInput" placeholder="Enter city name">
+
+    <button id="weatherBtn">Check Weather</button>
+
+    <div id="weatherResult"></div>
+</section>
+    </main>
+
+    <!-- JavaScript Files: Keep these at the bottom -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
