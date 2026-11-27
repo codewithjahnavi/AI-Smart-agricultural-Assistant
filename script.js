@@ -259,9 +259,28 @@ careBtn.addEventListener("click", function () {
         recommendation.tips.map(tip => "<li>" + tip + "</li>").join("") +
         "</ul>";
 });
+
 const weatherBtn = document.getElementById("weatherBtn");
 const cityInput = document.getElementById("cityInput");
 const weatherResult = document.getElementById("weatherResult");
+
+const validCities = [
+    "rayadurg",
+    "rayadurgam",
+    "anantapur",
+    "ananthapur",
+    "bangalore",
+    "bengaluru",
+    "hyderabad",
+    "chennai",
+    "vijayawada",
+    "tirupati",
+    "kurnool",
+    "kadapa",
+    "nellore",
+    "vizag",
+    "visakhapatnam"
+];
 
 weatherBtn.addEventListener("click", function () {
 
@@ -269,6 +288,12 @@ weatherBtn.addEventListener("click", function () {
 
     if (city === "") {
         weatherResult.innerText = "Please enter your city name.";
+        return;
+    }
+
+    if (!validCities.includes(city.toLowerCase())) {
+        weatherResult.innerText =
+            "City not found. Please enter a valid city name.";
         return;
     }
 
